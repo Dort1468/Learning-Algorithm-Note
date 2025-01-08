@@ -10,7 +10,7 @@ function isPrime(num) {
   }
 
   let starter = 2;
-  while (starter < num) {
+  while (starter < Math.sqrt(num)) {
     if (num % starter == 0) {
       return false;
     }
@@ -20,7 +20,7 @@ function isPrime(num) {
 }
 
 console.log(isPrime(51)); // false
-console.log(isPrime(44)); // false
+console.log(isPrime(101)); // true
 console.log(isPrime(13)); // true
 console.log(isPrime(17)); // true
 console.log(isPrime(95622)); // false

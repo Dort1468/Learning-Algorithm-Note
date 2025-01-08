@@ -56,6 +56,9 @@ function anotherNthPrime(n) {
   while (primeList.length < n) {
     let primeCheck = true;
     for (let number of primeList) {
+      if (number > Math.sqrt(starter)) {
+        break;
+      }
       if (starter % number == 0) {
         primeCheck = false;
         break;
